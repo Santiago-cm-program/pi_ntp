@@ -6,7 +6,8 @@ import google.generativeai as genai
 # Configuración de la app
 st.set_page_config(page_title="Chat Básico con Gemini", layout="centered")
 st.title("💬 Chat con Gemini")
-st.markdown("Ingresa un tema o pregunta para obtener una respuesta generada por Gemini.")
+st.markdown(
+    "Ingresa un tema o pregunta para obtener una respuesta generada por Gemini.")
 
 # Cargar variables de entorno
 load_dotenv()
@@ -17,21 +18,26 @@ if not api_key:
 else:
     genai.configure(api_key=api_key)
 
-# Interfaz de usuario
-prompt = st.text_input("Escribe tu pregunta o tema:", placeholder="Ej. Explica cómo funciona la IA en pocas palabras")
+# Interfaz de usuariodeactivate 
+prompt = st.text_input("Escribe tu pregunta o tema:",
+                       placeholder="Ej. Explica cómo funciona la IA en pocas palabras")
 enviar = st.button("Generar Respuesta")
 
 # Función corregida
+
+
 def generar_respuesta(prompt):
     if not prompt:
         return "Por favor, ingresa un tema o pregunta."
     try:
         # Crear el modelo directamente
-        model = genai.GenerativeModel("gemini-1.5-flash")  # 👈 usa la versión más estable
+        # 👈 usa la versión más estable
+        model = genai.GenerativeModel("gemini-1.5-flash")
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
         return f"Error: {str(e)}"
+
 
 # Lógica principal
 if enviar and prompt:

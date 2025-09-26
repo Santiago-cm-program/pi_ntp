@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#0078D4"          # Un azul vibrante, ideal para botones y enlaces.
+backgroundColor = "#FFFFFF"        # Fondo blanco para un diseño limpio y profesional.
+secondaryBackgroundColor = "#F0F2F6" # Un gris muy claro, perfecto para el sidebar.
+textColor = "#212121"              # Color de texto principal, un negro casi puro.
+font = "sans serif"

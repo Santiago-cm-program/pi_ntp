@@ -1,0 +1,7 @@
+[data-testid="stSidebar"] {
+    background-color: #F0F2F6; /* Color de fondo */
+}
+
+[data-testid="stSidebarNav"] {
+    background-color: #F0F2F6; /* Color de fondo para la barra lateral de navegación */
+}
